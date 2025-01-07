@@ -1,0 +1,862 @@
+/* universal selector */
+* {
+  font-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* element selector */
+h1 {
+  color: blue;
+}
+
+/* id selector */
+#style {
+  color: orange;
+  /* font-size:10px */
+}
+
+/* class selector */
+.design {
+  color: green;
+  /* font-size:10px; */
+}
+
+/* group selector */
+#style,
+.design {
+  font-size: 10px;
+}
+
+/* background */
+#style-background {
+  background-color: pink;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  background-image: url(./Screenshot\ 2024-08-04\ 003832.png);
+  background-size: 100px 100px;
+  color:azure;
+}
+body {
+  background-color: aliceblue;
+  /* background-image: url(./DP.jpg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  /* background-size: cover; */
+}
+
+/* border */
+#style-border {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+
+  /* to get a circle 50 px or % also */
+  border-radius: 7px;
+
+  /* property shorthand */
+  border: 2px solid yellow;
+
+  /* add border on one side */
+  border-top: 4px solid red;
+}
+
+/* margin */
+#style-margin {
+  width: 100px;
+  height: 100px;
+  background-color: antiquewhite;
+  border: 2px solid blue;
+  /* margin-left:50px; */
+
+  /* property shorthand */
+  /* all the four side */
+  /* margin:10px; */
+
+  /* top/bottom and left/right */
+  /* margin:20px 30px; */
+
+  /* top/bottom/left/right */
+  margin: 10px 20px 30px 40px;
+}
+
+/* padding */
+#style-padding {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  background-color: aquamarine;
+  margin: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+  /* property shorthand */
+  padding: 10px;
+
+  /* property shorthand */
+  padding: 10px 20px 30px 40px;
+
+  /* property shorthand */
+  /* left/right */
+  padding: 20px 30px;
+}
+
+/* final-div */
+#final-div {
+  width: 200px;
+  height: 200px;
+  border: 2px solid red;
+  background-color: azure;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* Text */
+.style-text {
+  color: black;
+  background-color: white;
+  width: 210px;
+  height: 210px;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+  text-indent: 40px;
+  letter-spacing: 1px;
+  line-height: 0.9; /*not used px*/
+  word-spacing: 9px;
+
+  /* Font */
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 10; /*not used px*/
+  font-family: "Permanent Marker", serif; /* using google link or simple bhi likh sakte ha */
+}
+
+/* inline convert to block level element */
+.style-display {
+  display: block;
+}
+
+/* block convert to inline element */
+#style-display {
+  display: inline;
+}
+
+/* nav (inline block) */
+.nav-item {
+  display: inline-block;
+}
+
+/* Combinator */
+/* descendant selector ()*/
+/* Important */
+#style-div span {
+  color: red;
+}
+
+/* child selector (>) */
+/* Important */
+#style-div > ul {
+  list-style-type: none;
+}
+
+/* general sibling selector (~) */
+#style-div ~ h2 {
+  color: orange;
+}
+
+/* adjacent sibling selector(+) */
+#style-div + p {
+  color: blue;
+}
+
+/* overflow */
+.style-overflow {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid black;
+  overflow: hidden;
+  overflow: visible;
+  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  overflow: auto;
+}
+
+/* shadow text */
+#shadow-text {
+  color: blue;
+
+  /* h-shadow ,v-shadow and blur or color */
+  text-shadow: 3px 3px 2px red;
+}
+
+/* shadow-box */
+#shadow-box {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  /* h,v,blur */
+  box-shadow: 6px 6px 6px teal;
+}
+
+/* text overflow */
+#style-overflowtext {
+  width: 100px;
+  white-space: nowrap;
+  color: blue;
+  border: 2px solid black;
+  text-shadow: 2px 3px 2px red;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* attribute selector */
+
+/* it will select all the <a> attribute having target=_blank (look for exact value)  */
+/* or (a)[] ke bina bhi likh sakte ha attribute ko  */
+/* Important */
+a[target="_blank"] {
+  background-color: yellow;
+}
+
+/* select all the element containing(start) title value "Hi" as a word  or (p)[] ke bina bhi likh sakte ha attribute ko */
+/* title look for exect word or specifie value */
+[title~="Hi"] {
+  color: red;
+  border: 2px solid black;
+}
+
+/* select all the element having class attribute name stating with "top"  */
+[class^="top"] {
+  color: orange;
+}
+
+/* te is a part of text (because top heading text and another test both are star in "te"  */
+/* title look for exect word   this is the basic different in both */
+/* select all the element whose class attribute contains "te" as a word(value) */
+/* Important */
+[class*="te"] {
+  color: blue;
+}
+
+
+/* application form  me style se likhna ho ya check box to different style me add krna ho to bhi used kr sakte ha */
+/* style ke liye used hota ha  */
+input[type="email"] {
+  color: red;
+  border: 2px solid blue;
+}
+
+input[type="text"] {
+  color: yellow;
+  border: 2px solid teal;
+}
+
+/* Position */
+/* Static */
+.position-static{
+  /* this is a by default value position static or isko likh bhi sakte ha or nhi bhi or all the element are position static  */
+  position:static;
+  margin:10px;
+  padding:10px;
+  background-color:green;
+  
+}
+
+/* Relative */
+.position-rel{
+  position:relative;
+  top:10px;
+  left:10px;
+  right:10px;
+  bottom:10px;
+  background-image:url(./Screenshot\ 2024-08-04\ 003832.png);
+  background-size:100px 100px;
+  /* width:100px; */
+  height:100px;
+}
+
+
+/* Absolute */
+.position-abs{
+  position:absolute;
+  background-color:aliceblue;
+  width:60px;
+  height:60px;
+  /* left:10px; */
+  font-size:10px;
+  right:20px;
+}
+
+/* Sticky */
+.position-sticky{
+  position:sticky;
+  top:10px;
+  width:100px;
+  background-color:yellow;
+}
+
+/* Fixed */
+.position-fixed{
+  position:fixed;
+  top:0px;
+  background-color:red;
+  width:100%;
+}
+
+nav ul {
+  list-style-type:none;
+}
+
+nav li{
+  display:inline;
+  text-transform:capitalize;
+  color:yellow;
+  margin:10px; 
+}
+
+/* Pseudo-class */
+/* selector can be attribute selector , selector can be combinator and selector can be basic selector */
+/* pseudo class is a predefine class */
+
+/* selector:pseudo class{
+  
+} */
+
+
+/* anchor tag */
+/* unvisited link */
+#style-link:link{
+  color:red;
+  text-decoration:none;
+
+}
+
+/* visited link */
+#style-link:visited{
+  color:blue;
+}
+
+/* hover */
+#style-link:hover{
+  color:yellow;
+}
+
+/* active */
+#style-link:active{
+  color:darkviolet;
+}
+
+p b:first-child{
+  color:orange;
+}
+
+
+/* select all the input which are disabled  */
+input:disabled{
+  border:2px solid red;
+}
+
+
+/* select all the input which are required */
+input:required{
+  border:2px solid blue;
+}
+
+input:checked{
+  border:none;
+  outline:2px solid red;;
+}
+
+/* color of any input box */
+input:focus{
+  background-color:yellow;
+}
+
+
+/* image will be blur/transparency of an element and pass value of opacity  0 & 1 */
+img:hover{
+  opacity: 0.3;
+}
+
+
+/* pseudo element */
+/* selector::pseudo element{} */
+
+p::first-letter{
+  color:red;
+  /* font-size:60px; */
+}
+
+p::first-line{
+  /* color:blue; */
+  font-size:20px
+}
+
+ul li::marker{
+  color:blue;
+}
+
+::selection{
+ /* only p ya other tag pr bhi apply kr sakte ha like(p::selection{}  */
+  /* color:yellow; */
+  background-color:yellow;
+}
+
+/* nth type  me ek (:) used hota ha */
+ul li:nth-child(2){
+  /* ul li:nth-child(odd or even) bhi likh sakte ha  */
+  color:yellow;
+}
+ 
+form input:nth-child(1){
+  background-color:red;
+}
+
+ul li:nth-last-child(1){
+  background-color:orange;
+}
+
+
+/* adding image or any other content (before and after both are working) */
+h3::before{
+  content:url(./DP.jpg);
+  background-size:100px 100px;
+  /* content:"Hello word" */
+}
+
+
+/* flex */
+.flex-container{
+   display:flex;
+   flex-direction:row;
+   /* flex-direction:column; */
+   /* flex-direction:row-reverse; */
+   /* flex-direction:column-reverse; */
+
+
+
+   /* justify-content used for spaceing */
+   justify-content:center;
+   /* justify-content:right; */
+   /* justify-content:space-around; */
+   justify-content:space-between;
+   /* justify-content:space-evenly; */
+   flex-wrap:wrap;
+   /* flex-wrap:nowrap; */
+   height:300px;
+   background-color:yellow;
+   align-content:space-around;
+   /* align-content:space-evenly; */
+   /* align-content:space-between; */
+   align-items:center;
+   /* align-items:start;  or flex-start bhi likh sakte ha */
+   /* align-items:flex-end; */  
+}
+
+.flex-container div{
+/* color:blue; */
+background-color:cyan;
+border:2px solid none;
+width:300px;
+height:100px;
+resize:horizontal;
+resize:vertical;
+overflow:auto;
+}
+
+
+.flex-con{
+  display:flex;
+  flex-direction:right;
+  /* flex-direction:row-reverse; */
+
+  /* space-between,space-around,space-evenly,center, flex-start,flex-end all are used in justify content */
+  
+  /* justify-content used for spaceing */
+  /* justify-content:space-around; */
+  /* justify-content:space-between; */
+  justify-content:space-evenly;
+  /* justify-content:center; */
+}
+
+
+.flex-con div{
+  background-color:white;
+  width:300px;
+  height:200px;
+  border:2px solid none;
+}
+
+body{
+  background-color:rgb(235, 228, 228);
+  /* margin:0; */
+  /* padding:0; */
+}
+
+
+/* order ke liye used hota ha  */
+.container{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-content: space-around;
+  
+}
+
+.container div{
+  border:1px solid none;
+  width:130px;
+  height:200px;
+  background-color:cornflowerblue
+}
+
+
+/* flex-grow ke used ke liye */
+.container-d{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-content:space-around;
+  background-color:yellow;
+  height:300px;
+}
+.container-d div{
+  width:60px;
+  height:200px;
+  background-color:cadetblue;
+  border:1px solid black;
+}
+
+
+/* flex basis ke used ke liye */
+.dody{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-content:center;
+  background-color:yellow;
+  height:400px;
+
+}
+
+.dody div{
+  width:200px;
+  height:200px;
+  border:1px solid none;
+  background-color:cyan;
+  background-image:url(./DP.jpg);
+  background-size:200px;
+  /* background-repeat:no-repeat;
+  background-attachment: center; */
+}
+
+
+/* grid layout */
+/* grid container */
+.grid-container{
+  display:grid;
+
+  /* defining width for each column */
+  /* auto auto auto me bhi likh sakte ha width ko */
+  grid-template-columns:400px 400px 400px; 
+
+  /* defining height for each row */
+  grid-template-rows:60px 60px 60px;
+
+  justify-content:space-around;
+  /* justify-content:center;
+  justify-content:right;
+  justify-content:left; */
+
+
+  /* align se hm upper neeche or center me kr sakte ha box ko  bo bhi only vertically side me  */
+  /* align-content:start;
+  align-content:end;
+  align-content:center;
+  align-content:space-between; */
+  align-content:space-around;
+  background-color:yellow;
+  height:300px;
+}
+
+.grid-container div{
+  background-color:azure;
+  border:1px solid black;
+  font-size:40px;
+  text-align:center;
+}
+
+
+.grid-cont{
+  display:grid;
+  /* 400px ki jgh hm 1fr bhi likh sakte ha (1fr or 2fr ka mtlb 2 column ko ek sakth merge krna ) */
+  grid-template-columns:400px 400px 400px;
+  grid-template-rows:60px 60px 60px;
+  padding:10px;
+
+  /* gap row or column me bhi add kr sakte ha like (column-gap:) */
+  gap:10px;
+  background-color:darkorchid;
+}
+
+.grid-cont div{
+ background-color:chartreuse;
+ border:1px solid black;
+}
+
+.item-one{
+
+  /* it will take space from 1 to till 2 column */
+ grid-column:1/3;
+
+ /* it will take space 1 ti till 5 row */
+ grid-row:1/6;
+}
+
+
+
+.grid-c{
+  display:grid;
+  grid-template-columns:100px 100px 100px ;
+  grid-template-rows:60px 60px 60px;
+  background-color:yellow;
+
+ /* justify-contentse me hm content(box) ko start or end me ya center me kr sakte ha  */
+ /* horizental directionn me work krta ha  */
+  justify-content:space-around;
+  
+  /* vertical-align ke liya used hota ha  */
+  align-content:center;
+  
+}
+
+.grid-c div{
+  background-color:pink;
+  border:1px solid black;
+}
+
+.g-box{
+  display:grid;
+  grid-template-columns:auto auto auto;
+  grid-template-rows:100px 100px 100px;
+  background-color:yellow;
+
+  /* column-gap:10px;
+  row-gap:10px; */
+  gap:10px;
+}
+
+.g-box div{
+  border:1px solid black;
+  background-color:red;
+}
+.item-box {
+  grid-column:1/3;
+  grid-row:1/3;
+}
+
+
+/* Website layout */
+.one{
+  grid-area:header;
+}
+.two{
+  grid-area:main;
+}
+.three{
+  grid-area:section;
+}
+.four{
+  grid-area:right;
+}
+.five{
+  grid-area:footer;
+}
+.six{
+  grid-area:group;
+}
+
+.website-layout{
+  display:grid;
+  height:300px;
+  grid-template-areas:
+  "header header header header header header"
+  "main section section right right right  "
+  "main footer footer footer footer footer"
+  "group group group group group group";
+
+  gap:10px;
+}
+
+.website-layout div{
+  border:1px solid black;
+  background-color:aqua;
+}
+
+
+/* @Media */
+.div-media{
+  background-color:red;
+  height:100px;
+  color:aliceblue
+}
+
+
+/* @media rule media-type operator (condition) */
+/* 0 till 400px its a mobile designs */
+@media screen and (max-width:400px) {
+  .div-media{
+    background-color:orange;
+  }
+  /* .p{
+    font-size:10px;
+  } */
+}
+
+
+/* 600px and above (large phone) */
+@media screen and (min-width:600px) {
+  .div-media{
+    background-color:yellow;
+    /* font-size:60px; */
+  }
+}
+  
+/* tablet */
+@media screen and (min-width:768px) {
+  .div-media {
+    background-color:blue;
+  }
+}
+
+/* ipad */
+@media screen and (min-width:992px){
+  .div-media{
+    background-color:aqua;
+  }
+}
+
+/* laptop */
+@media screen and (min-width:1200px){
+  .div-media{
+    background-color:fuchsia;
+    font-size:10px;
+  }
+
+}
+
+.flex-co{
+  display:flex;
+  flex-direction:column;
+  /* justify-content:space-evenly; */
+}
+
+.flex-co img{
+  width:100%;
+  /* by considering smaller screen devices */
+  max-width:100px;
+  /* or 25 rem bhi likh sakte ha  */
+  height:auto;
+}
+
+/* width:height */
+/* 16:9 youtube videos */
+@media screen and (orientation:landscape){
+  .flex-co {
+    flex-direction:row;
+  }
+}
+
+
+/* width:height */
+/* 9:16 (insta reels) */
+@media screen and (orientation:potrait){
+  .flex-co {
+    flex-direction:column;
+  }
+}
+
+/* 1in 96px 2.65cm or 1rem 16px using for imagr */
+#simple-div{
+  border:1px solid black;
+  background-color:aqua;
+  width:200px;
+  height:200px;
+}
+
+#animated-div{
+  border:1px solid black;
+  background-color:coral;
+  width:200px;
+  height:200px;
+
+  /* custom name: give any name */
+  animation-name:box;
+
+
+  /* timing */
+  animation-duration:6s;
+
+  /* animation will start after 6 s */
+  animation-delay:6s;
+
+
+  /* animation will go on for infinite time */
+  animation-iteration-count:infinite;
+
+
+  /* reverse the process of animation */
+  animation-direction:reverse;
+}
+
+@keyframes box{
+  20%{
+    background-color:yellow;
+  }
+
+  30%{
+    background-color:blue;
+  }
+
+  70%{
+    background-color:fuchsia
+  }
+}
+
+#bounce-ball{
+ background-color:aqua;
+ border:1px solid black;
+ width:100px;
+ height:100px;
+ border-radius:50%;
+
+ /* animation */
+ animation-name:Boll;
+ animation-duration:2s;
+ /* animation-direction:alternate; */
+ animation-iteration-count:infinite;
+}
+
+@keyframes Boll{
+  from{
+    margin-top:200px;
+    margin-left: 100px;
+  }
+
+  to{
+   margin-top:0px;
+  }
+}
+
