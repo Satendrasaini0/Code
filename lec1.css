@@ -860,3 +860,34 @@ body{
   }
 }
 
+
+/* Trafic Light */
+#outer{
+  border:2px solid black;
+  width:70px;
+  height:200px;
+  box-shadow:2px 2px 10px black;
+  
+}
+.inner{
+  border:1px solid black;
+  height:50px;
+  width:50px;
+  margin:10px;
+  border-radius:50px;
+}
+
+#red{
+  background-color:red;
+}
+
+#green{
+  background-color:green;
+}
+
+#yellow{
+  background-color:yellow;
+}
+#outer:hover{
+ box-shadow: 2px 2px 10px orange;
+}
